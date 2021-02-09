@@ -196,4 +196,13 @@ abstract class Schema
      * @throws PathNotFoundException
      */
     abstract public function getRequestParameters($path, $method);
+
+    /**
+     * @param $method
+     * @return array
+     */
+    public function getPaths()
+    {
+        return $this->jsonFile[self::SWAGGER_PATHS];
+    }
 }
